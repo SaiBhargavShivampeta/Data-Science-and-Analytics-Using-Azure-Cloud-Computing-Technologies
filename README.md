@@ -1,125 +1,110 @@
-# Data-Science-and-Analytics-Using-Azure-Cloud-Computing-Technologies
+# Retail Analytics Dashboard
 
-The project integrates Azure services and machine learning models to address business challenges such as Customer Lifetime Value (CLV) prediction and churn analysis. 
+## Project Overview
+This is a comprehensive retail analytics application built using Streamlit, designed to provide insights into customer behavior, purchasing trends, and product associations in a retail dataset.
 
+## Project Structure
+The project consists of several key Python scripts:
 
-## Table of Contents
-1. [Project Description](#project-description)
-2. [Technologies Used](#technologies-used)
-3. [Features](#features)
-4. [Setup and Installation](#setup-and-installation)
-5. [How to Use](#how-to-use)
-6. [ML Models](#ml-models)
-7. [Tasks](#tasks)
+### Data Preparation and Analysis
+- `data_preparation.py`: Handles data cleaning, merging, and feature engineering
+  - Processes three main datasets: households, products, and transactions
+  - Performs data cleaning and null value handling
+  - Calculates customer engagement metrics
+  - Prepares data for various analyses including spending trends, churn prediction, and basket analysis
 
----
+### Streamlit Applications
+1. `Home.py`: 
+   - Provides an overview of the dataset
+   - Allows sorting of data by different columns
 
-## Project Description
-This project demonstrates the use of **Azure Cloud Computing Technologies** for developing a data-driven web application. Key components include:
-- **Interactive Web Pages**: For data visualization and ML applications.
-- **Machine Learning Models**: Designed for predicting customer behavior, such as CLV and churn.
-- **Azure Integration**: Leveraging Azure services for deployment, data management, and scaling.
+2. `1_Search.py`:
+   - Enables searching and filtering of data by Household Number (HSHD_NUM)
+   - Provides sorting functionality
 
----
+3. `2_Dashboard.py`:
+   - Visualizes key insights including:
+     * Demographics and Engagement
+     * Household Size vs Spend
+     * Impact of Children on Spending
+     * Store Location Analysis
+     * Spending Trends Over Time
+     * Product Category Performance
 
-## Technologies Used
-- **Azure Services**:
-  - Azure Storage (Datastore)
-  - Azure App Services (Web App Hosting)
-- **Machine Learning Frameworks**:
-  - Scikit-learn
-  - Pandas
-- **Web Development**:
-  - Flask (Backend Framework)
-  - SQLite3 (Database)
-- **Visualization**:
-  - Dash or Matplotlib (for interactive dashboards)
+4. `3_Churn_Prediction.py`:
+   - Displays correlation analysis between disengagement and demographics
+   - Visualizes spend and purchase frequency trends by disengagement status
 
----
+5. `4_Basket_Analysis.py`:
+   - Performs association rules analysis
+   - Generates insights into product co-purchases
+   - Allows filtering of association rules by support and confidence
 
-## Features
-- **Write-Up on ML Models**: Comprehensive insights into Linear Regression, Random Forest, and Gradient Boosting.
-- **Web Server Setup**: Secure web server deployment with user authentication (default credentials: username: `abhay`, password: `Abhay`).
-- **Datastore and Data Loading**: Seamless integration with Azure for managing datasets.
-- **Interactive Dashboard**: Real-time visualization of business insights, such as CLV and churn metrics.
-- **Data Loading Web App**: A simple web interface for uploading and processing data.
-- **Churn Prediction**: Uses ML models to identify customers at risk of leaving.
+### Data Retrieval
+- `retrieve_data.py`: Uploads datasets to MongoDB for potential cloud storage and retrieval
 
----
+## Key Features
+- Comprehensive data cleaning and preprocessing
+- Interactive Streamlit dashboard
+- Multiple views of retail data:
+  - Transaction search
+  - Demographic insights
+  - Spending trends
+  - Churn prediction
+  - Basket analysis
 
-## Setup and Installation
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/your-repo-name.git
-    ```
-2. **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. **Configure Azure**:
-   - Create an Azure Storage Account and configure the connection in the `config.json` file.
-   - Deploy the web server using Azure App Service.
-4. **Run the Application**:
-    ```bash
-    python app.py
-    ```
+## Prerequisites
+- Python 3.8+
+- Streamlit
+- Pandas
+- Seaborn
+- Matplotlib
+- Scikit-learn
+- MLxtend
+- PyMongo (for data retrieval script)
 
----
+## Installation
 
-## How to Use
-1. **Log In or Register**: Use the default credentials (`username: abhay, password: Abhay`) or create a new account.
-2. **Load Data**:
-   - Navigate to the "Data Loading" page.
-   - Upload datasets for ML models and dashboards.
-3. **Interact with Dashboards**:
-   - Explore visualizations for Customer Lifetime Value (CLV).
-   - Analyze churn predictions.
-4. **Run ML Models**:
-   - Use the web interface to select and execute machine learning models.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/retail-analytics-dashboard.git
+cd retail-analytics-dashboard
+```
 
----
+2. Create a virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 
-## ML Models
-### Linear Regression
-- **Description**: Predicts continuous target variables by identifying linear relationships in the data.
-- **Limitations**: Struggles with complex or nonlinear patterns.
+3. Install required packages
+```bash
+pip install -r requirements.txt
+```
 
-### Random Forest
-- **Description**: An ensemble method combining multiple decision trees for accurate predictions.
-- **Advantages**: Robust against noise, handles high-dimensional data, and computes feature importance.
+4. Run the Streamlit application
+```bash
+streamlit run Home.py
+```
 
-### Gradient Boosting
-- **Description**: Iteratively improves predictions by minimizing the error of the previous models.
-- **Use Case**: Effective for non-linear relationships but requires careful tuning.
+## Data Sources
+The project uses three primary CSV files:
+- `households.csv`: Household demographic information
+- `products.csv`: Product details
+- `transactions.csv`: Transaction records
 
----
+## Configuration
+- Ensure MongoDB connection details are set in Streamlit secrets if using the data retrieval script
 
-## Tasks
-1. **ML Model Write-Up**:
-   - Detailed analysis of Linear Regression, Random Forest, and Gradient Boosting.
-   - Justification for using Random Forest for CLV prediction.
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-2. **Web Server Setup**:
-   - Configured using Flask and hosted on Azure App Services.
-   - Includes user authentication (default credentials: username: `abhay`, password: `Abhay`).
+## License
+[Specify your license here]
 
-3. **Datastore and Data Loading**:
-   - Integrated Azure Storage for secure and efficient data management.
-
-4. **Interactive Web Page**:
-   - Developed using Flask, with user-friendly navigation for loading and analyzing data.
-
-5. **Data Loading Web App**:
-   - Provides a simple interface for uploading datasets.
-
-6. **Dashboard Integration**:
-   - Real-time visualizations for key business metrics, such as CLV and churn.
-
-7. **ML Model Application**:
-   - Implemented machine learning models to predict CLV and churn.
-
-8. **Churn Prediction**:
-   - Identifies customers at risk of leaving using Random Forest.
-
----
-
+## Contact
+[Your contact information]
