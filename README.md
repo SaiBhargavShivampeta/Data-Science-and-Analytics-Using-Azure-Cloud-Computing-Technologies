@@ -1,12 +1,6 @@
 # Data-Science-and-Analytics-Using-Azure-Cloud-Computing-Technologies
-# Cloud Assignment: Final Group Project
 
-This repository contains the implementation of the **Data Science and Analytics Using Azure Cloud Computing Technologies** project. The project is developed by leveraging Azure services and machine learning techniques to address specific business challenges such as Customer Lifetime Value (CLV) prediction and churn analysis.
-
-## Team Members
-- **Abhay Juloori** (M16455296)
-- **Sai Bhargav Shivampeta** (M16431104)
-- **Gajendar Tiwari** (M16531332)
+The project is developed by leveraging Azure services and machine learning techniques to address specific business challenges such as Customer Lifetime Value (CLV) prediction and churn analysis.
 
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -14,7 +8,6 @@ This repository contains the implementation of the **Data Science and Analytics 
 3. [Setup and Installation](#setup-and-installation)
 4. [How to Use](#how-to-use)
 5. [ML Models](#ml-models)
-6. [License](#license)
 
 ---
 
@@ -76,5 +69,4 @@ An iterative model for tasks with nonlinear relationships, offering high perform
 
 ---
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
