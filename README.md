@@ -1,4 +1,4 @@
-# Retail Analytics Dashboard
+# Data-Science-and-Analytics-Using-Azure-Cloud-Computing-Technologies
 
 ## Project Overview
 This is a comprehensive retail analytics application built using Streamlit, designed to provide insights into customer behavior, purchasing trends, and product associations in a retail dataset.
@@ -103,8 +103,7 @@ The project uses three primary CSV files:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-[Specify your license here]
+## Live Demo
+Explore the deployed application using this link: [Streamlit App](https://cloudassignment.streamlit.app/)
 
-## Contact
-[Your contact information]
+
