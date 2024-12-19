@@ -1,5 +1,9 @@
 # Data-Science-and-Analytics-Using-Azure-Cloud-Computing-Technologies
 
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live_App-blue)](https://cloudassignment.streamlit.app/)
+
+Access the live application here: [https://cloudassignment.streamlit.app/](https://cloudassignment.streamlit.app/)
+
 ## Project Overview
 This is a comprehensive retail analytics application built using Streamlit, designed to provide insights into customer behavior, purchasing trends, and product associations in a retail dataset.
 
